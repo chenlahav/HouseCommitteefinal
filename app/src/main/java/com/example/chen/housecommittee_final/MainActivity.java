@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent loginIntent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(loginIntent);
+                //Intent loginIntent = new Intent(getApplicationContext(), LoginActivity.class);
+                //startActivity(loginIntent);
             }
         });
     }
