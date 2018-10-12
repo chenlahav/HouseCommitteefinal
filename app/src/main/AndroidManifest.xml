@@ -21,7 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".list_of_neighbors"></activity>
+        <activity android:name=".list_of_neighbors" />
+        <activity android:name=".Login" />
+        <activity android:name=".ForgetPassword" />
+        <activity android:name=".CreateAccount"></activity>
     </application>
 
 </manifest>
