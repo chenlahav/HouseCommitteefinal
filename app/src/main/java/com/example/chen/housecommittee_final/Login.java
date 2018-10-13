@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
@@ -46,6 +48,34 @@ public class Login extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                //$validation$
+
+                //apartement validation
+                try {
+                    int apartmentNumber = Integer.parseInt(((TextView) findViewById(R.id.editText_aprt_num)).getText().toString());
+                    if ((!((1 <= apartmentNumber) && (apartmentNumber <= 100)))) {
+                        CharSequence text = "Invalid apartment!";
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast = Toast.makeText(getApplicationContext(), text, duration);
+                        toast.show();
+                        return;
+                    }
+                }
+                catch(Exception exception){
+                    return;
+                }
+
+                //password validation
+                String passwordText= ((TextView)findViewById(R.id.editText_password)).getText().toString();
+                if(passwordText.length()<=0){
+                    CharSequence text = "Invalid password!";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(getApplicationContext(), text, duration);
+                    toast.show();
+                    return;
+                }
+
                 Boolean isCommittee = false;
                 if(getIntent().getExtras() != null)
                     isCommittee = getIntent().getExtras().getBoolean("isCommittee");
