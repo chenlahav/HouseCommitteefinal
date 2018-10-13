@@ -24,7 +24,9 @@
         <activity android:name=".list_of_neighbors" />
         <activity android:name=".Login" />
         <activity android:name=".ForgetPassword" />
-        <activity android:name=".CreateAccount"></activity>
+        <activity android:name=".CreateAccount" />
+        <activity android:name=".HomeCommittee" />
+        <activity android:name=".HomeTenant"></activity>
     </application>
 
 </manifest>

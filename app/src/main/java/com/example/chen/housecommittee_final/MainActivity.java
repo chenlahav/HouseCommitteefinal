@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(getApplicationContext(), Login.class);
+                RadioButton isCommittee = (RadioButton) findViewById(R.id.radioButton_committee);
+                loginIntent.putExtra("isCommittee", isCommittee.isChecked());
                 startActivity(loginIntent);
             }
         });

@@ -4,65 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateAccount">
+    tools:context=".HomeCommittee">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editText_name"
+        <Button
+            android:id="@+id/button_tenant_payments"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editText_last_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Last Name"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editText_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="ID"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/editText_apt_num"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Apartment Number"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/editText_paymant"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Monthly payment amount"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/editText_seniority"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Seniority"
-            android:inputType="number" />
+            android:text="View tenant payments"
+            tools:layout_editor_absoluteX="88dp"
+            tools:layout_editor_absoluteY="275dp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_all_payment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create Account" />
+            android:text="View all payments in the building"
+            tools:layout_editor_absoluteX="88dp"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <Button
+            android:id="@+id/button_update_tenant_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="update tenant pyaments"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <Button
+            android:id="@+id/button_monthly_income"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="view monthly income" />
+
+        <Button
+            android:id="@+id/button_all_providers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="view all providers" />
+
+        <Button
+            android:id="@+id/button_optimal_provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="view optimal provider" />
+
+        <Button
+            android:id="@+id/button_update_provider_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="update provider details" />
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
