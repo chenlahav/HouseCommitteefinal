@@ -26,7 +26,8 @@
         <activity android:name=".ForgetPassword" />
         <activity android:name=".CreateAccount" />
         <activity android:name=".HomeCommittee" />
-        <activity android:name=".HomeTenant"></activity>
+        <activity android:name=".HomeTenant" />
+        <activity android:name=".TenantPayment"></activity>
     </application>
 
 </manifest>
