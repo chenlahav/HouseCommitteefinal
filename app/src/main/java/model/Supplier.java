@@ -1,10 +1,10 @@
 package model;
 public class Supplier 
 {
-	private int m_ID;
-	private String m_Name;
-	private int m_Quality; // 1-10
-	private int m_Availability; // 1-10
+	protected int m_ID;
+	protected String m_Name;
+	protected int m_Quality; // 1-10
+	protected int m_Availability; // 1-10
 	
 	public int GetID() 
 	{

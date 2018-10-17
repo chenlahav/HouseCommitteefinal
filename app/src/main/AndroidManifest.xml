@@ -27,7 +27,8 @@
         <activity android:name=".HomeCommittee" />
         <activity android:name=".HomeTenant" />
         <activity android:name=".ListOfTenant" />
-        <activity android:name=".TenantPayment"></activity>
+        <activity android:name=".TenantPayment" />
+        <activity android:name=".CreateProvider"></activity>
     </application>
 
 </manifest>
