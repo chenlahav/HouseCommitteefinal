@@ -52,9 +52,10 @@ public class ListOfTenant extends AppCompatActivity {
                 listViewListOfTenant.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent tenantPayment = new Intent(getApplicationContext(), TenantPayment.class);
-                        tenantPayment.putExtra("id",id );
-                        startActivity(tenantPayment);
+                        Intent tenantPaymentIntent = new Intent(getApplicationContext(), TenantPayment.class);
+                        Resident resident = (Resident) listOfTenants.get(position);
+                        tenantPaymentIntent.putExtra("id", resident.GetID() );
+                        startActivity(tenantPaymentIntent);
                     }
                 });
             }
@@ -64,26 +65,5 @@ public class ListOfTenant extends AppCompatActivity {
 
             }
         });
-
-
-
-
-//        users.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                if (dataSnapshot.exists()) {
-//                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-//                        Resident resident = snapshot.getValue(Resident.class);
-//                        if (resident.GetRole() == eRole.Resident) {
-//                            listOfTenants.add(resident);
-//                        }
-//                    }
-//                }
-//            }
-
-
-
-
-
     }
 }

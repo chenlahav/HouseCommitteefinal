@@ -1,10 +1,15 @@
 package model;
-public class Payment
+
+import java.io.Serializable;
+
+public class Payment implements Serializable
 {
-	private float m_Amount;
-	private eMonths m_Month;
-	
-	public Payment(float amount, eMonths month)
+	protected int m_Amount;
+	protected int m_Month;
+
+	public Payment() {}
+
+	public Payment(int amount, int month)
 	{
 		m_Amount = amount;
 		m_Month = month;
@@ -12,6 +17,6 @@ public class Payment
 	
 	public String toString()
 	{
-		return m_Month.name() + ": " + m_Amount;
+		return m_Month + ": " + m_Amount;
 	}
 }

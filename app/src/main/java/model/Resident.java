@@ -7,7 +7,7 @@ public class Resident extends User
 	protected Integer m_ApartmentNumber;
 	protected eRole m_Role;
 	protected int m_MonthlyPayment;
-	protected ArrayList<Payment> m_PaidPayments;
+	protected ArrayList<Payment> m_PaidPayments = new ArrayList<>();
 
 	public Resident() {}
 
@@ -17,8 +17,15 @@ public class Resident extends User
 		SetApartmentNumber(i_ApartmentNumber);
 		SetMonthlyPayment(i_MonthlyPayment);
 		m_Role = eRole.Resident;
+		initPayments();
 	}
-	
+
+	public void initPayments(){
+		for(int i=1; i<=12; i++){
+			m_PaidPayments.add(new Payment(0, i));
+		}
+	}
+
 	public eRole GetRole()
 	{
 		return m_Role;
