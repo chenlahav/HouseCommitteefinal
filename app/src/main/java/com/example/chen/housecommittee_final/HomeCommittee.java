@@ -33,5 +33,14 @@ public class HomeCommittee extends AppCompatActivity {
                 startActivity(updateTenantPaymentIntent);
             }
         });
+
+        Button updateProviderDetails = (Button)findViewById(R.id.button_update_provider_details);
+        updateProviderDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent createProvider = new Intent(getApplicationContext(), CreateProvider.class);
+                startActivity(createProvider);
+            }
+        });
     }
 }
