@@ -1,5 +1,6 @@
 package com.example.chen.housecommittee_final;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,6 +44,9 @@ public class TenantPayment extends AppCompatActivity {
 
                 users.child(id).child("m_PaidPayments").child(Integer.toString(month-1)).child("m_Amount").
                         setValue(amountToPay);
+
+                Intent savePaymentIntent = new Intent(getApplicationContext(), HomeCommittee.class);
+                startActivity(savePaymentIntent);
 
             }
         });

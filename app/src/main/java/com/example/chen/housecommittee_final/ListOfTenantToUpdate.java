@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,7 +19,7 @@ import java.util.List;
 import model.Resident;
 import model.eRole;
 
-public class ListOfTenant extends AppCompatActivity {
+public class ListOfTenantToUpdate extends AppCompatActivity {
 
     ListView tenantsListView;
     public List<Resident> listOfTenants = new ArrayList<>();
@@ -28,7 +27,7 @@ public class ListOfTenant extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_of_tenant);
+        setContentView(R.layout.activity_list_of_tenant_to_update);
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference users = database.getReference("users");
@@ -45,7 +44,7 @@ public class ListOfTenant extends AppCompatActivity {
                 }
 
                 final TanentListToUpdateAdapter listOfTenantsAdapter =
-                        new TanentListToUpdateAdapter(listOfTenants, ListOfTenant.this);
+                        new TanentListToUpdateAdapter(listOfTenants, ListOfTenantToUpdate.this);
                 ListView listViewListOfTenant = findViewById(R.id.listView_list_of_tenant);
                 listViewListOfTenant.setAdapter(listOfTenantsAdapter);
 

@@ -29,7 +29,7 @@ public class HomeCommittee extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent updateTenantPaymentIntent = new Intent(getApplicationContext(), ListOfTenant.class);
+                Intent updateTenantPaymentIntent = new Intent(getApplicationContext(), ListOfTenantToUpdate.class);
                 startActivity(updateTenantPaymentIntent);
             }
         });
