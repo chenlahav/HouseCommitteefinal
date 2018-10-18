@@ -14,6 +14,17 @@ public class HomeCommittee extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_committee);
 
+
+        Button view_tenant_payments = (Button) findViewById(R.id.button_tenant_payments);
+        view_tenant_payments.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent viewAllPaymentsIntent = new Intent(getApplicationContext(), ListOfTanentToViewPayments.class);
+                startActivity(viewAllPaymentsIntent);
+            }
+        });
+
         Button view_all_payments = (Button) findViewById(R.id.button_all_payment);
         view_all_payments.setOnClickListener(new View.OnClickListener() {
 

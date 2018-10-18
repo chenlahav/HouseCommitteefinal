@@ -19,7 +19,7 @@ import java.util.List;
 import model.Resident;
 import model.eRole;
 
-public class ListOfTenantsToViewPayment extends AppCompatActivity {
+public class ListOfTanentToViewPayments extends AppCompatActivity {
 
     ListView tenantsListView;
     public List<Resident> listOfTenants = new ArrayList<>();
@@ -27,7 +27,7 @@ public class ListOfTenantsToViewPayment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_of_tenants_to_view_payment);
+        setContentView(R.layout.activity_list_of_tanent_to_view_payments);
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference users = database.getReference("users");
@@ -44,14 +44,14 @@ public class ListOfTenantsToViewPayment extends AppCompatActivity {
                 }
 
                 final TanentListToUpdateAdapter listOfTenantsAdapter =
-                        new TanentListToUpdateAdapter(listOfTenants, ListOfTenantsToViewPayment.this);
-                ListView listViewListOfTenant = findViewById(R.id.listView_list_of_tenant);
+                        new TanentListToUpdateAdapter(listOfTenants, ListOfTanentToViewPayments.this);
+                ListView listViewListOfTenant = findViewById(R.id.listView_to_view_payments);
                 listViewListOfTenant.setAdapter(listOfTenantsAdapter);
 
                 listViewListOfTenant.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent tenantPaymentIntent = new Intent(getApplicationContext(), AllPyamentsInTheBuilding.class);
+                        Intent tenantPaymentIntent = new Intent(getApplicationContext(), TenantMonthsPaid.class);
                         Resident resident = (Resident) listOfTenants.get(position);
                         tenantPaymentIntent.putExtra("id", resident.GetID() );
                         startActivity(tenantPaymentIntent);
@@ -66,3 +66,4 @@ public class ListOfTenantsToViewPayment extends AppCompatActivity {
         });
     }
 }
+

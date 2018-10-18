@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListOfTenantsToViewPayment">
+    tools:context=".ListOfTanentToViewPayments">
 
+    <ListView
+        android:id="@+id/listView_to_view_payments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>
