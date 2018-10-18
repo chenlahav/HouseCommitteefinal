@@ -5,6 +5,21 @@ public class Supplier
 	protected String m_Name;
 	protected int m_Quality; // 1-10
 	protected int m_Availability; // 1-10
+	protected String m_Phone;
+	protected String m_Price;
+	protected String m_Category;
+
+	public String GetPhone(){return m_Phone;}
+
+	public void SetPhone(String phone){m_Phone = phone;}
+
+	public String GetPrice(){return m_Price;}
+
+	public void SetPrice(String price){m_Price = price;}
+
+	public String GetCategory(){return m_Category;}
+
+	public void SetCategory(String category){m_Category= category;}
 	
 	public int GetID() 
 	{

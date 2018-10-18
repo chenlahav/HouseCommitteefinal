@@ -44,12 +44,24 @@ public class CreateProvider extends AppCompatActivity {
                 EditText AvailabilityEditText = (EditText)findViewById(R.id.AvailabilityEditText);
                 int availability = Integer.parseInt(QualityEditText.getText().toString());
 
+
+                EditText phoneEditText = (EditText)findViewById(R.id.PhoneEditText);
+                String phone = phoneEditText .getText().toString();
+
+                EditText categoryEditText = (EditText)findViewById(R.id.CategoryEditText);
+                String category = categoryEditText .getText().toString();
+
+                EditText priceEditText = (EditText)findViewById(R.id.PriceEditText);
+                String price = priceEditText.getText().toString();
+
                 Supplier supplier = new Supplier();
                 supplier.SetName(name);
                 supplier.SetID(id);
                 supplier.SetAvailability(availability);
                 supplier.SetQuality(quality);
-
+                supplier.SetPhone(phone);
+                supplier.SetCategory(category);
+                supplier.SetPrice(price);
 
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference supplierDB = database.getReference("supplier");

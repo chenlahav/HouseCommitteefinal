@@ -28,9 +28,10 @@
         <activity android:name=".HomeTenant" />
         <activity android:name=".ListOfTenant" />
         <activity android:name=".TenantPayment" />
-        <activity android:name=".CreateProvider"></activity>
+        <activity android:name=".CreateProvider" />
         <activity android:name=".TenantPayment" />
-        <activity android:name=".AllPyamentsInTheBuilding"></activity>
+        <activity android:name=".AllPyamentsInTheBuilding" />
+        <activity android:name=".ProviderList" />
     </application>
 
 </manifest>
