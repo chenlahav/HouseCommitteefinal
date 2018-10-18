@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListOfTenant">
+    tools:context=".ListOfTanentToViewPayments">
 
     <ListView
-        android:id="@+id/listView_list_of_tenant"
+        android:id="@+id/listView_to_view_payments"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>
