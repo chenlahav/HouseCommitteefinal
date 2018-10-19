@@ -62,5 +62,25 @@ public class HomeCommittee extends AppCompatActivity {
                 startActivity(allSuppliers);
             }
         });
+
+        final Button monthly_income = (Button)findViewById(R.id.button_monthly_income);
+        monthly_income.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent monthlyPayment = new Intent(getApplicationContext(), MonthlyIncome.class);
+                startActivity(monthlyPayment);
+
+            }
+        });
+
+        final Button optimal_provider= (Button)findViewById(R.id.button_optimal_provider);
+        optimal_provider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent optimalProvider = new Intent(getApplicationContext(), OptimalProvider.class);
+                startActivity(optimalProvider);
+
+            }
+        });
     }
 }
