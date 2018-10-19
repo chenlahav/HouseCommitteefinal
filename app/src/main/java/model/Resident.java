@@ -11,9 +11,9 @@ public class Resident extends User
 
 	public Resident() {}
 
-	public Resident(String i_FirstName, String i_LastName, String i_ID, int i_ApartmentNumber, int i_MonthlyPayment)
+	public Resident(String i_FirstName, String i_LastName, String i_ID, int i_ApartmentNumber, int i_MonthlyPayment, String i_Email)
 	{
-		super(i_FirstName, i_LastName, i_ID);
+		super(i_FirstName, i_LastName, i_ID, i_Email);
 		SetApartmentNumber(i_ApartmentNumber);
 		SetMonthlyPayment(i_MonthlyPayment);
 		m_Role = eRole.Resident;

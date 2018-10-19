@@ -73,7 +73,7 @@ public class CreateAccount extends AppCompatActivity {
                     EditText seniorityEditText = (EditText) findViewById(R.id.editText_seniority);
                     int seniority  = Integer.parseInt(seniorityEditText.getText().toString());
 
-                    Committee newCommittee = new Committee(name,lastName,id,seniority);
+                    Committee newCommittee = new Committee(name,lastName,id,seniority, email);
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference users = database.getReference("users");
@@ -89,7 +89,7 @@ public class CreateAccount extends AppCompatActivity {
                     EditText paymentEditText = (EditText) findViewById(R.id.editText_paymant);
                     int payment = Integer.parseInt(paymentEditText.getText().toString());
 
-                    Resident newResident = new Resident(name, lastName, id, aptNum, payment);
+                    Resident newResident = new Resident(name, lastName, id, aptNum, payment, email);
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference users = database.getReference("users");

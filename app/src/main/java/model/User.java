@@ -7,13 +7,24 @@ public abstract class User
 	protected String m_LastName;
 	//protected String m_Password;
 	protected String m_ID;
+	protected String m_Email;
 
 	public User(){}
 
-	public User(String i_FirstName, String i_LastName, String i_ID)
+    public String getM_Email() {
+        return m_Email;
+    }
+
+    public void setM_Email(String m_Email) {
+        this.m_Email = m_Email;
+    }
+
+    public User(String i_FirstName, String i_LastName, String i_ID, String i_Email)
 	{
 		setID(i_ID);
 		setName(i_FirstName, i_LastName);
+		m_Email = i_Email;
+
 	}
 	
 	public String GetName()

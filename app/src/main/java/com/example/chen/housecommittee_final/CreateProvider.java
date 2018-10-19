@@ -67,6 +67,9 @@ public class CreateProvider extends AppCompatActivity {
                 DatabaseReference supplierDB = database.getReference("supplier");
                 supplierDB.child(name).setValue(supplier);
 
+                Intent saveIntent = new Intent(getApplicationContext(), HomeCommittee.class);
+                startActivity(saveIntent);
+
 
             }
         });

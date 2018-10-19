@@ -7,9 +7,9 @@ public class Committee extends User implements Serializable
 	protected int m_Seniority;
 	protected  eRole m_Role;
 
-	public Committee(String i_FirstName, String i_LastName, String i_ID, int i_Seniority)
+	public Committee(String i_FirstName, String i_LastName, String i_ID, int i_Seniority, String i_Email)
 	{
-		super(i_FirstName, i_LastName, i_ID);
+		super(i_FirstName, i_LastName, i_ID, i_Email);
 		SetSeniority(i_Seniority);
 		m_Role = eRole.Committee;
 	}

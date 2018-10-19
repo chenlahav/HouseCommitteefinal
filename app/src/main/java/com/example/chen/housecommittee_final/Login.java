@@ -58,7 +58,7 @@ public class Login extends AppCompatActivity {
                 //$validation$
 
                 //email validation
-                String email = ((TextView) findViewById(R.id.editText_email)).getText().toString();
+                final String email = ((TextView) findViewById(R.id.editText_email)).getText().toString();
                 if(email.isEmpty())
                 {
                     CharSequence text = "email is empty!";
@@ -94,6 +94,7 @@ public class Login extends AppCompatActivity {
                             }
                             else{
                                 Intent homeTenantIntent = new Intent(getApplicationContext(), HomeTenant.class);
+                                homeTenantIntent.putExtra("email", email);
                                 startActivity(homeTenantIntent);
                             }
                         }
