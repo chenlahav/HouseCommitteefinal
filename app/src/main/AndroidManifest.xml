@@ -33,6 +33,8 @@
         <activity android:name=".TenantMonthsPaid" />
         <activity android:name=".ListOfTanentToViewPayments" />
         <activity android:name=".ProviderList" />
+        <activity android:name=".MonthlyIncome" />
+        <activity android:name=".OptimalProvider"></activity>
     </application>
 
 </manifest>
